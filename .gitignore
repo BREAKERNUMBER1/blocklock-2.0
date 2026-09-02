@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Firmware secrets (real config, keep only config.h.example in git)
+firmware/**/config.h
+
+# Build output
+frontend/dist/
+contracts/artifacts/
+contracts/cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

@@ -1,0 +1,21 @@
+{
+  "name": "blocklock-litvm-contracts",
+  "version": "1.0.0",
+  "description": "BlockLock-LitVM smart contracts - pay-to-unlock on LitVM Liteforge testnet",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:liteforge": "hardhat run scripts/deploy.js --network liteforge",
+    "set-price:liteforge": "hardhat run scripts/setPrice.js --network liteforge",
+    "transfer-ownership:liteforge": "hardhat run scripts/transferOwnership.js --network liteforge",
+    "generate-wallets": "node scripts/generateWallets.js",
+    "test": "hardhat test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^17.3.1"
+  }
+}

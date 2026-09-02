@@ -1,0 +1,42 @@
+#pragma once
+
+// ============================================================
+//  BlockLock ESP32 — Configuration
+//  Copy this file to config.h and fill in your values before uploading.
+// ============================================================
+
+// --- WiFi ---
+#define WIFI_SSID       "YOUR_WIFI_SSID"
+#define WIFI_PASSWORD   "YOUR_WIFI_PASSWORD"
+
+// --- MQTT Broker ---
+#define MQTT_BROKER     "dlb.tech"
+#define MQTT_PORT       8883          // TLS port
+#define MQTT_USERNAME   "blocklock"
+#define MQTT_PASSWORD   "GENERATE_A_STRONG_PASSWORD_HERE"
+#define MQTT_CLIENT_ID  "blocklock-door-001"
+
+// --- Door Identity ---
+#define DOOR_ID         "door_001"
+
+// --- HMAC Secret (must match MQTT_HMAC_SECRET in backend .env) ---
+// Generate with: node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+#define HMAC_SECRET     "GENERATE_A_LONG_RANDOM_HEX_STRING_HERE"
+
+// --- MQTT Topics ---
+#define TOPIC_UNLOCK    "blocklock/door/" DOOR_ID "/unlock"
+#define TOPIC_STATUS    "blocklock/door/" DOOR_ID "/status"
+#define TOPIC_HEARTBEAT "blocklock/door/" DOOR_ID "/heartbeat"
+
+// --- Hardware Pins ---
+#define RELAY_PIN       26    // GPIO connected to relay IN
+#define STATUS_LED_PIN  2     // Onboard LED (GPIO2 on most ESP32 dev boards)
+
+// --- Timing ---
+#define UNLOCK_DURATION_MS  5000   // How long relay stays open (ms) — server can override
+#define HEARTBEAT_INTERVAL  30000  // Heartbeat publish interval (ms)
+
+// --- Security ---
+// Max age of an unlock command in seconds. Commands older than this are rejected.
+// Protects against delayed replay of captured MQTT messages.
+#define MAX_COMMAND_AGE_SECONDS  30
