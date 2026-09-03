@@ -105,7 +105,13 @@ docs/        Architecture deep-dive + full deployment walkthrough for LitVM Lite
 
 Live end-to-end on LitVM Liteforge testnet at [dlb.tech](https://dlb.tech), including a verified real payment → contract → MQTT → physical unlock. LitVM mainnet is targeted for H2 2026 — see [`docs/litvm-deployment.md`](docs/litvm-deployment.md) for the full setup walkthrough, from wallet generation through server provisioning.
 
-- `PayToUnlock` contract: `0xac5bBc05A04323fa336c1FC38c5Ee9356C6E4D6D`
+### Deployed contract (LitVM Liteforge Testnet, chain ID 4441)
+
+| Contract | Address | Published |
+|---|---|---|
+| `PayToUnlock` | [`0xac5bBc05A04323fa336c1FC38c5Ee9356C6E4D6D`](https://liteforge.explorer.caldera.xyz/address/0xac5bBc05A04323fa336c1FC38c5Ee9356C6E4D6D) | 2026-09-02 |
+
+Live and independently verifiable: `eth_getCode` for that address against LitVM's RPC (`https://liteforge.rpc.caldera.xyz/infra-partner-http`) returns the deployed `PayToUnlock` bytecode. LitVM's block-explorer indexer is new and doesn't yet flag every address as a contract, so the RPC node — not the explorer UI — is the ground truth here.
 
 ## Local setup
 
