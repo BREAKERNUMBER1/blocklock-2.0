@@ -77,7 +77,6 @@ This is a variant of [BlockLock](https://github.com/BREAKERNUMBER1/blocklock) (t
 - **TLS certificate verification is off by default** (`wifiClient.setInsecure()`). `docs/litvm-deployment.md` documents CA-cert pinning for production; it isn't the default.
 - **Rate limits are dev-tuned** (50 requests/min/IP on `/api/submit-tx`, commented as "relaxed for testing").
 - **Shares a WalletConnect/Reown project ID with the original BlockLock app** (Reown Starter-plan limit) — the wallet-connect popup currently shows "BlockLock" branding rather than "BlockLock-LitVM." Cosmetic only, but worth fixing before pointing an external/public audience at this.
-- **No LICENSE file** at the repo root. `PayToUnlock.sol` carries an individual MIT SPDX header; nothing else does.
 
 ## Stack
 
