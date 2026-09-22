@@ -21,7 +21,11 @@ This is a variant of [BlockLock](https://github.com/BREAKERNUMBER1/blocklock) bu
 
 ## Demo
 
-*(video/GIF of the physical unlock goes here — wallet pays zkLTC → relay click → door opens)*
+https://github.com/BREAKERNUMBER1/blocklock-2.0/releases/download/demo-v1/BlockLock_LitVM_Vid.mov
+
+Tap the NFC tag → connect wallet → pay ~$1 in zkLTC → contract splits the payment on-chain (90% treasury / 10% ops fund) → MQTT unlock signal → physical lock opens.
+
+*(GitHub previews this file inline; if it doesn't render for you, [watch/download it directly](https://github.com/BREAKERNUMBER1/blocklock-2.0/releases/download/demo-v1/BlockLock_LitVM_Vid.mov).)*
 
 ## Why LitVM
 
